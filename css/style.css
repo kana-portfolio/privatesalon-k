@@ -166,7 +166,9 @@
 }
 
 .hero-inner {
-  width: min(980px100%)
+  max-width: 980px:
+  margin-inline:auto;
+  width: min(980px100%);
   position: relative;
   text-align:center;
   animation: hero-in .8s ease-out both;
@@ -684,6 +686,7 @@ input[type="datetim-lical"] {
   }
 
 }
+
 
 
 
