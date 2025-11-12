@@ -129,6 +129,12 @@
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
 /* Hero */
 
 .hero {
@@ -230,6 +236,11 @@
     line-height: 1.8;
   }
 }
+
+  @media .hero img {
+    width: 80%;
+    height: auto;
+  }
 
 /* design */
 .gallery {
@@ -508,6 +519,16 @@
   .btn-insta, .btn-line, .btb-site { width: 100%;}
 }
 
+@media.reserve-form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+@media.btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+  
 /* フォーム */
 
 .reserve-form {
@@ -670,5 +691,11 @@ input[type="datetim-lical"] {
   }
   .footer .nav-list {
     gap: 12px;
+  }
+
+}
+
+  section {
+    padding: 40px 20px;
   }
 }
