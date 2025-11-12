@@ -229,7 +229,8 @@
 
 @media (max-width: 640px) {
   .hero { min-height: 72vh; }
-  .hero-txt { line-height: 1.6; }
+  .hero-title { font-size: clamp(20px, 6.4vw, 30px)
+  .hero-txt { font-size: clamp(14px, 3.6vw, 16px) }
 }
 
 /* design */
@@ -674,5 +675,6 @@ input[type="datetim-lical"] {
   }
 
 }
+
 
 
