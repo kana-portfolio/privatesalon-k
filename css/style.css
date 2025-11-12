@@ -75,6 +75,7 @@
   left: 0;
   width: 100%;
   height: var(--header-h);
+  padding: var(--header-pad-y) 60px;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   display: flex;
@@ -84,7 +85,6 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
   z-index: 100;
   transition: backgroung 0.3;
-  margin-top: calc(var(--header-h) - 40px);
 }
 
 .header-logo img {
@@ -142,7 +142,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--ing);
+  color: var(--ink);
 
  background:
     radial-gradient(1200px 600px at 15% 0%, rgba(0,0,0,0.05), transparent 60%),
@@ -168,7 +168,7 @@
 .hero-inner {
   max-width: 980px;
   margin-inline:auto;
-  width: min(980px100%);
+  width: min(980px, 100%);
   position: relative;
   text-align:center;
   animation: hero-in .8s ease-out both;
@@ -191,9 +191,9 @@
 .hero-title {
   white-space: nowrap;
   font-weight: 600;
-  letter-spacing: 0.8em;
+  letter-spacing: .08em;
   font-size: clamp(22px, 3.6vw, 36px);
-  line-height: 1.9;
+  line-height: 1.2;
   margin-bottom: clamp(10px, 2.2vw, 14px);
   overflow-wrap: anywhere;
   margin-bottom: clamp(24px, 4vw, 40px);
@@ -207,7 +207,7 @@
   font-size: clamp(14px, 2.2vw, 18px);
   line-height: 1.8;
   max-width:min(84ch, 93%);
-  margin-inline: auto;
+  margin: 0 auto clamp(24px, 4vw, 40px);
   padding-inline: clamp(12px, 6vw, 24px);
   white-space: normal;
   overflow-wrap: anywhere;
@@ -239,11 +239,13 @@
   box-shadow: 0 4px 14px rgba(0, 0, 0,.10);
 }
 
+
 @media (max-width: 640px) {
   .hero { min-height: 72vh; }
-  .hero-title { font-size: clamp(20px, 6.4vw, 30px);
+  .hero-title { font-size: clamp(20px, 6.4vw, 30px); }
   .hero-txt { font-size: clamp(14px, 3.6vw, 16px); }
 }
+
 
 /* design */
 .gallery {
@@ -312,7 +314,7 @@
 }
 
 #menu .container {
-  min-width: 1100px;
+  max-width: 1100px;
   margin: 0 auto;
   padding-inline: 20px;
 }
@@ -354,7 +356,7 @@
 
 .price li strong small {
   font-weight: 600;
-  overflow: 0.75;
+  opacity: .75;
   margin-left: 2px;
 }
 
@@ -386,7 +388,7 @@
   letter-spacing: .06em;
   color: #8a6b3d;
   background: #f7efe3;
-  border: 1px solid#ecdcc7;
+  border: 1px solid #ecdcc7;
   padding: 2px 8px;
   border-radius: 999px;
 }
@@ -396,7 +398,7 @@
 }
 
 /* voice */
-#voive h2 {
+#voice h2 {
   text-align: center;
   font-size: clamp(22px, 3.4vw, 30px);
   letter-spacing: .12em;
@@ -457,7 +459,7 @@
 }
 
 #reserve .container {
-  min-width: 1100px;
+  max-width: 1100px;
   margin: 0 auto;
   padding-inline: 20px;
   text-align: center;
@@ -505,7 +507,7 @@
   background: #06c755;
 }
 
-.btb-site {
+.btn-site {
   background: #bda79b;
 }
 
@@ -517,7 +519,7 @@
   }
 }
 
-@media (max-width: 520) {
+@media (max-width: 520px) {
   .reserve-links { gap: 10px;}
   .btn-insta, .btn-line, .btb-site { width: 100%;}
 }
@@ -602,14 +604,14 @@ form label {
 }
 
 @media (hover:hover) and (pointer: fine) {
-  .form .btn-saite:hover {
+  .form .btn-site:hover {
     transform: translateY(-1px);
     opacity: .94;
     box-shadow: 0 8px 26px rgba(0, 0, 0,.12);
   }
 }
 
-input[type="datetim-lical"] {
+input[type="datetim-local"] {
   line-height: 1.2;
 }
 
@@ -687,6 +689,7 @@ input[type="datetim-lical"] {
   }
 
 }
+
 
 
 
