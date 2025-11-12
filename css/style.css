@@ -859,3 +859,49 @@ input[type="datetim-lical"] {
   img, video { max-width: 100%; height: auto; }
   .container, .gallery, .section, .section-cta { overflow: hidden; }
 }
+
+/* 旧：
+.hero-inner {
+  position: relative;
+  min-width: 980px;
+  width: 100%;
+  animation: hero-in .8s ease-out both;
+}
+*/
+
+/* 新：スマホで横ズレしない & 中央寄せ */
+.hero-inner {
+  position: relative;
+  max-width: 980px;               /* 980pxを上限にする */
+  width: min(100%, 980px);        /* Safari古めでもOKな保険は下の@supportsへ */
+  margin-inline: auto;            /* 中央寄せ */
+  padding-inline: clamp(16px, 5vw, 32px); /* 余白を可変にして詰まり回避 */
+  animation: hero-in .8s ease-out both;
+}
+
+/* 古いブラウザ向けフォールバック（任意だけど入れておくと安心） */
+@supports not (width: min(100%, 980px)) {
+  .hero-inner { width: 100%; }
+}
+
+/* ロゴを少し可変にして詰まり防止 */
+.hero-logo {
+  width: clamp(96px, 32vw, 200px);
+}
+
+/* モバイルで高さと文字バランスを少しだけ緩める */
+@media (max-width: 640px) {
+  .hero {
+    min-height: calc(68vh - var(--header-h)); /* 少し低めでも十分リッチに見える */
+    padding: 56px 18px;
+  }
+  .hero-title {
+    font-size: clamp(20px, 7vw, 28px);
+    margin-bottom: clamp(8px, 2vw, 14px);
+  }
+  .hero-txt {
+    font-size: clamp(13px, 3.8vw, 16px);
+    line-height: 1.8;
+    margin-bottom: clamp(16px, 4vw, 24px);
+  }
+}
