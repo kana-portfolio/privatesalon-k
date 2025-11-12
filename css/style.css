@@ -199,7 +199,7 @@
   color: var(--muted);
   font-size: clamp(14px, 2.2vw, 18px);
   line-height: 1.9;
-  margin-bottom: clamp(20px, 3.2vw, 32px);
+  margin-bottom: clamp(20px, 3.2vw, 28px);
   overflow-wrap: anywhere;
 }
 
@@ -674,3 +674,4 @@ input[type="datetim-lical"] {
   }
 
 }
+
