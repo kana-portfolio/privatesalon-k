@@ -228,11 +228,15 @@
   .hero {
     min-height: calc(72vh - var(--header-h));
     padding: 56px 18px;
+    overflow-x: hidden;
+    padding-inline: 6%;
   }
   .hero-txt {
     max-width: 90%
-      padding-inline: 5%;
+      margin: 0 auto;
+      padding-inline: 4%;
     line-height: 1.8;
+    overflow-wrap: anywhere;
   }
 }
 
@@ -910,6 +914,7 @@ input[type="datetim-lical"] {
     margin-bottom: clamp(16px, 4vw, 24px);
   }
 }
+
 
 
 
