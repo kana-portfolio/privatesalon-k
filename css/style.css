@@ -197,8 +197,9 @@
   font-size: clamp(14px, 2.2vw, 18px);
   line-height: 1.9;
   margin-bottom: clamp(20px, 3.2vw, 32px);
-  max-width: 42ch;
-  margin-inline: auto; 
+  max-width: 90%;
+  text-align: center;
+  padding-inline: 5%; 
   overflow-wrap: anywhere; 
 }
 
@@ -909,4 +910,5 @@ input[type="datetim-lical"] {
     margin-bottom: clamp(16px, 4vw, 24px);
   }
 }
+
 
