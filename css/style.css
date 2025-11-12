@@ -733,3 +733,129 @@ input[type="datetim-lical"] {
   .header-inner{ padding: 10px 14px; }
   .reserve-links{ grid-template-columns: 1fr; }
 }
+
+/* ===== モバイル最終調整（Hero / Menu / Reserve） ===== */
+@media (max-width: 768px) {
+
+  /* ヘッダー高さぶんだけ本文に余白（重なり防止） */
+  :root { --sp-header-h: 72px; }
+  .header {
+    position: sticky; /* fixedだとズレやすいのでsticky推奨 */
+    top: 0;
+    z-index: 50;
+    height: var(--sp-header-h);
+    padding: 0 16px;
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(0,0,0,.06);
+  }
+  body { padding-top: var(--sp-header-h); }
+
+  .header-logo img { height: 40px; width: auto; }
+  .header-nav .nav-list { gap: 16px; }
+  .header-nav .nav-list a { font-size: 16px; line-height: 1; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    min-height: 70vh;
+    padding: 24px 16px 40px;
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+  }
+  .hero-inner {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-rogo {
+    width: 140px; /* ロゴの見え方だけ小さめに */
+    height: auto;
+    display: block;
+    margin: 0 auto 16px;
+  }
+  .hero-title {
+    font-size: clamp(20px, 6vw, 28px);
+    letter-spacing: .15em;
+    line-height: 1.4;
+    margin: 6px 0 8px;
+    white-space: normal; /* はみ出し防止 */
+  }
+  .hero-txt {
+    font-size: clamp(12px, 3.6vw, 16px);
+    line-height: 1.7;
+    margin-bottom: 18px;
+    padding: 0 6px;
+  }
+  .hero-btn {
+    display: inline-block;
+    width: min(90%, 360px);
+    padding: 14px 18px;
+    border-radius: 999px;
+    font-size: 16px;
+  }
+
+  /* ---------- Menu（Price表） ---------- */
+  /* 見出し周りはそのまま、カードの内側だけ調整 */
+  #menu .price,
+  .price {
+    display: grid;
+    gap: 12px;
+    margin-top: 14px;
+  }
+  .price li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    font-size: 16px;
+  }
+  .price li span { font-size: 16px; }
+  .price li strong { font-size: 16px; }
+
+  /* ---------- Reserve（ボタン＋フォーム） ---------- */
+  .section-cta .reserve-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .section-cta .reserve-links a {
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+    border-radius: 999px;
+    font-size: 16px;
+  }
+
+  .reserve-form { margin-top: 16px; }
+  .reserve-form .form {
+    display: grid;
+    gap: 12px;
+  }
+  .reserve-form .form label {
+    font-size: 14px;
+  }
+  .reserve-form .form input,
+  .reserve-form .form textarea,
+  .reserve-form .form select {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;   /* iOSの勝手なズーム防止 */
+    padding: 14px 16px;
+    border-radius: 12px;
+  }
+  .reserve-form .btn-site {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 999px;
+    margin-top: 4px;
+  }
+
+  /* ---------- 細かいはみ出し保険 ---------- */
+  img, video { max-width: 100%; height: auto; }
+  .container, .gallery, .section, .section-cta { overflow: hidden; }
+}
