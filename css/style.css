@@ -197,9 +197,7 @@
   font-size: clamp(14px, 2.2vw, 18px);
   line-height: 1.9;
   margin-bottom: clamp(20px, 3.2vw, 32px);
-  max-width: 90%;
-  text-align: center;
-  padding-inline: 5%; 
+  max-width: 42ch;
   overflow-wrap: anywhere; 
 }
 
@@ -232,6 +230,8 @@
     padding: 56px 18px;
   }
   .hero-txt {
+    max-width: 90%
+      padding-inline: 5%;
     line-height: 1.8;
   }
 }
@@ -910,5 +910,6 @@ input[type="datetim-lical"] {
     margin-bottom: clamp(16px, 4vw, 24px);
   }
 }
+
 
 
