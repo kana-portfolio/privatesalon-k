@@ -167,6 +167,7 @@
   min-width: 980px;
   width: 100%;
   animation: hero-in .8s ease-out both;
+  padding-inline: clamp(16px, 5vw, 32px);
 }
 
 @keyframes hero-in {
@@ -196,6 +197,9 @@
   font-size: clamp(14px, 2.2vw, 18px);
   line-height: 1.9;
   margin-bottom: clamp(20px, 3.2vw, 32px);
+  max-width: 42ch;
+  margin-inline: auto; 
+  overflow-wrap: anywhere; 
 }
 
 .hero-btn {
@@ -905,3 +909,4 @@ input[type="datetim-lical"] {
     margin-bottom: clamp(16px, 4vw, 24px);
   }
 }
+
